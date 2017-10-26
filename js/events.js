@@ -4,13 +4,15 @@ function getIt() {
 }
 
 function frameIt() {
-  $('img').class = tasty;
+  $('img').class = "tasty";
 }
 
-function pressIt(key) {
-  if(key.which===71) {
-    window.alert("You pressed G!")
-  }
+function pressIt() {
+  $('document').on('keydown', function(key) {
+    if(key.which==71) {
+      alert("You pressed G")
+    }
+  })
 }
 
 function submitIt() {
@@ -23,7 +25,7 @@ $('p').on('click',getIt);
 
 $(document).on('load',frameIt);
 
-$('input').on('keydown',pressIt);
+pressIt();
 
 $('form').on('submit',submitIt);
 
