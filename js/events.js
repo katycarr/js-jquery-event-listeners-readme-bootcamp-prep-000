@@ -3,8 +3,11 @@ function getIt() {
   window.alert("Hey!");
 }
 
+
 function frameIt() {
-  $('img').class = "tasty";
+  $('img').on('load',function() {
+    $('img').class = "tasty";
+  }
 }
 
 function pressIt() {
@@ -23,7 +26,7 @@ $(document).ready(function(){
 // call functions here
 $('p').on('click',getIt);
 
-$('img').on('load',frameIt);
+frameIt();
 
 pressIt();
 
