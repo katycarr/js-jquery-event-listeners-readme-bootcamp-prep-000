@@ -23,7 +23,7 @@ $(document).ready(function(){
 // call functions here
 $('p').on('click',getIt);
 
-$(document).on('load',frameIt);
+$('img').on('load',frameIt);
 
 pressIt();
 
